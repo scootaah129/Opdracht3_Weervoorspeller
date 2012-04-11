@@ -79,7 +79,7 @@ void TextueelScherm::toonWeerData()
 	this->weerInfoNeerslag->setCaption(data);
 
 	//stel tekst in voor minimum temperatuur label
-	sprintf( data, "Minimum: %i%%	/ %i%% / %i%%", weerData->minimumtemperatuur[0], weerData->minimumtemperatuur[1], weerData->minimumtemperatuur[3] );
+	sprintf( data, "Minimum: %i	/ %i / %i", weerData->minimumtemperatuur[0], weerData->minimumtemperatuur[1], weerData->minimumtemperatuur[3] );
 	this->weerInfoMintemp->setCaption(data);
 }
 

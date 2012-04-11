@@ -104,15 +104,31 @@ void VisueelScherm::update()
 
 	//teken de staven van zonneschijn, neerslag en minimum temperatuur
 	//zonneschijn
+	//vandaag
 	maSetColor(0xFF0000);
-	maFillRect(30, 130 + (100-this->weerData->zonneschijn[0]) , 40, this->weerData->zonneschijn[0]);
+	maFillRect(30, 130 + (100-this->weerData->zonneschijn[0]) , 10, this->weerData->zonneschijn[0]);
+	//morgen
+	maFillRect(45, 130 + (100-this->weerData->zonneschijn[1]) , 10, this->weerData->zonneschijn[1]);
+	//overmorgen
+	maFillRect(60, 130 + (100-this->weerData->zonneschijn[2]) , 10, this->weerData->zonneschijn[2]);
 
+	//neerslag
 	maSetColor(0x00FF00);
-	maFillRect(80, 130 + (100-this->weerData->neerslag[0]) , 40, this->weerData->neerslag[0]);
+	//vandaag
+	maFillRect(80, 130 + (100-this->weerData->neerslag[0]) , 10, this->weerData->neerslag[0]);
+	//morgen
+	maFillRect(95, 130 + (100-this->weerData->neerslag[1]) , 10, this->weerData->neerslag[1]);
+	//overmorgen'
+	maFillRect(110, 130 + (100-this->weerData->neerslag[2]) , 10, this->weerData->neerslag[2]);
 
+	//minimum temp
 	maSetColor(0xFF0000);
-	maFillRect(130, 130 + (100-this->weerData->minimumtemperatuur[0]) , 40, this->weerData->minimumtemperatuur[0]);
-
+	//vandaag
+	maFillRect(130, 130 + (100-this->weerData->minimumtemperatuur[0]) , 10, this->weerData->minimumtemperatuur[0]);
+	//morgen
+	maFillRect(130, 145 + (100-this->weerData->minimumtemperatuur[1]) , 10, this->weerData->minimumtemperatuur[1]);
+	//overmorgen
+	maFillRect(130, 160 + (100-this->weerData->minimumtemperatuur[2]) , 10, this->weerData->minimumtemperatuur[2]);
 
 	//altijd draw target na tekenen teruggeven naar scherm!
 	maSetDrawTarget( HANDLE_SCREEN );
